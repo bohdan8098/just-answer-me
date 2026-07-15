@@ -1,0 +1,8 @@
+body {
+  font-family: $font-sans;
+  background-color: $bg-light;
+  color: $text-light;
+  line-height: 1.5;
+  min-height: 100vh;
+  @include flex-center(column); 
+}

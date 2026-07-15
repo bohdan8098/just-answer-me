@@ -38,14 +38,37 @@ function App() {
     setCurrentIndex(currentIndex - 1);
   }
 
+  const currentStory = initialStories[currentIndex];
+
   return (
-    <>
-      <h1>{initialStories[currentIndex].title}</h1>
-      <p>{initialStories[currentIndex].text}</p>
-      <p>{initialStories[currentIndex].questions[0]}</p>
-      <button onClick={back} disabled={currentIndex === 0}>Назад</button>
-      <button onClick={next} disabled={currentIndex === initialStories.length - 1}>Вперед</button>
-    </>
+    <main className="app-container">
+      <article className="story-card">
+        <header className="story-card__header">
+          <span className="story-card__counter">
+            Story {currentIndex + 1} of {initialStories.length}
+          </span>
+          <h1 className="story-card__title">{currentStory.title}</h1>
+        </header>
+
+        <div className="story-card__body">
+          <p className="story-card__text">{currentStory.text}</p>
+        </div>
+
+        <footer className="story-card__questions">
+          <h2 className="story-card__questions-title">Question to answer:</h2>
+          <p className="story-card__question-text">{currentStory.questions[0]}</p>
+        </footer>
+      </article>
+
+      <div className="navigation">
+        <button className="btn btn--secondary" onClick={back} disabled={currentIndex === 0}>
+          Back
+        </button>
+        <button className="btn btn--primary" onClick={next} disabled={currentIndex === initialStories.length - 1}>
+          Next
+        </button>
+      </div>
+    </main>
   );
 }
 
