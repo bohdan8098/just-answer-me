@@ -1,1 +1,70 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
 
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px; 
+  padding: 0 24px;
+  flex: 1;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color $transition-speed, transform $transition-speed, opacity $transition-speed;
+
+  &:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: #ffffff;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $text-light;
+    border: 2px solid $border-light;
+
+    &:hover:not(:disabled) {
+      background-color: rgba($primary-color, 0.05);
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}
+
+@include tablet {
+  .navigation {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .btn {
+    flex: initial;
+    min-width: 120px;
+    height: 44px;
+  }
+}

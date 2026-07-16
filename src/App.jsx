@@ -61,7 +61,7 @@ function App() {
       </article>
 
       <div className="navigation">
-        <button className="btn btn--secondary" onClick={back} disabled={currentIndex === 0}>
+        <button className="btn btn--primary" onClick={back} disabled={currentIndex === 0}>
           Back
         </button>
         <button className="btn btn--primary" onClick={next} disabled={currentIndex === initialStories.length - 1}>

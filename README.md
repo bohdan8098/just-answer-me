@@ -1,16 +1,22 @@
-# React + Vite
+# Just Answer Me
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application built with **React** and **Vite** designed to practice English through engaging stories and thought-provoking questions.
 
-Currently, two official plugins are available:
+**[LIVE DEMO](https://bohdan8098.github.io/just-answer-me/)** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Curated Stories:** A collection of engaging short stories to read and analyze.
+*   **Active Speaking/Writing Practice:** Each story is accompanied by interactive questions to help you construct answers in English.
+*   **Modern UI/UX:** Styled using clean **SCSS** with a **Mobile-First** approach. Fully responsive on phones, tablets, and desktops.
+*   **Interactive Transitions:** Smooth hover effects and micro-interactions on cards and buttons.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+*   **Frontend:** React (hooks like `useState` for state management), Vite (HMR enabled).
+*   **Styling:** SCSS (Sass) with modular `@import` architecture, custom variables, and responsive mixins.
+*   **Version Control:** Git & GitHub.
